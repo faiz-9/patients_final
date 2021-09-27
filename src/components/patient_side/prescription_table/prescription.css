@@ -1,0 +1,316 @@
+/* DASHBOARD STYLING*/
+
+.dashboard_container {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  height: 672px;
+  width: 293px;
+  margin: 40px 0 0 50px;
+}
+
+.dashboard_contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* align-items: center; */
+}
+
+.dashboard_contents ul li {
+  margin: 30px 15px;
+  list-style: none;
+  border-bottom: 0.7px solid #d9d9d9;
+  padding: 10px 0;
+}
+
+.dashboard_contents ul li a {
+  color: #7c7c7c;
+  text-decoration: none;
+  /* margin-bottom: 15px; */
+}
+
+.dashboard_contents ul li a span {
+  margin-right: 10px;
+}
+
+.dashboard_contents .active_class {
+  color: #1fc0f3;
+}
+
+.dashboard_contents .settings {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dashboard_contents .settings li {
+  width: 100%;
+}
+
+/* MAIN SETTINGS ONE STARTS */
+
+.main_settings_dashboard {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  margin: 40px 50px 0 10px;
+  width: 100%;
+}
+
+.settings_container {
+  padding: 40px 40px;
+}
+
+.inputs_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  /* background-color: yellow; */
+  /* width: 35%; */
+  max-width: 450px;
+  justify-content: space-between;
+}
+
+.inputs :nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.inputs input {
+  background: #eeeeee;
+  border-radius: 20px;
+  padding: 6px 40px 6px 15px;
+  border: none;
+  margin-bottom: 30px;
+  width: 250px;
+}
+
+.inputs input:focus {
+  outline: none;
+}
+
+.active {
+  color: #1fc0f3;
+}
+
+.notification-content p {
+  margin-bottom: 10px;
+}
+
+.notification-content .not_items {
+  display: flex;
+}
+
+.notification-content .boxes {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+::placeholder {
+  color: #7c7c7c;
+}
+
+.btn-cancel {
+  background: #ffffff;
+  border: 1px solid #1fc0f3;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 5px 12px;
+  cursor: pointer;
+  color: #1fc0f3;
+  margin-right: 10px;
+}
+
+.btn-save {
+  background: #1fc0f3;
+  border-radius: 24px;
+  padding: 5px 12px;
+  color: #ffffff;
+  /* border: none; */
+  outline: none;
+  border: 1px solid #1fc0f3;
+  cursor: pointer;
+}
+
+.buttons_container {
+  margin-top: 35px;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+  .dashboard_wrapper {
+    flex-direction: column;
+  }
+
+  .dashboard_container {
+    /* flex-direction: column; */
+    width: 100%;
+    margin: 0;
+    height: unset;
+  }
+
+  .dashboard_contents {
+    height: unset;
+    margin-left: 30px;
+  }
+
+  .main_settings_dashboard {
+    margin: 40px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inputs {
+    flex-direction: column;
+  }
+  .notification-content .not_items {
+    flex-direction: column;
+  }
+}
+
+/* SPECIFIC FOR THIS PAGE ONLY  */
+
+.prescription__container {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prescription__container .pres_h {
+  color: #243d63;
+}
+
+.filter button {
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid #1fc0f3;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 5px 22px;
+}
+
+.create_profile_dashboard {
+  height: unset;
+}
+
+/* TABLE STYLING */
+.table_wrapper {
+  margin-top: 20px;
+}
+
+.table_wrapper table {
+  width: 100%;
+  border: 0.5px solid #7c7c7c;
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+  border-collapse: collapse;
+  /* padding: 2px 4px; */
+}
+
+.table_wrapper th,
+tr {
+  text-align: left;
+  border-bottom: 0.5px solid #7c7c7c;
+}
+
+.table_wrapper th {
+  padding: 12px;
+  color: #1fc0f3;
+}
+
+.table_wrapper td {
+  padding: 14px;
+  font-size: 15px;
+}
+
+.table_wrapper tr img {
+  cursor: pointer;
+}
+
+/* RESPONSIVE TABLE CODE  */
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  .table_wrapper table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .table_wrapper tr:nth-of-type(1) {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table_wrapper tr {
+    border: 1px solid #ccc;
+  }
+
+  .table_wrapper td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table_wrapper td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+	Label the data
+	*/
+  .table_wrapper td:nth-of-type(1):before {
+    content: "S.No";
+  }
+  .table_wrapper td:nth-of-type(2):before {
+    content: "Booking ID";
+  }
+  .table_wrapper td:nth-of-type(3):before {
+    content: "ERX Number";
+  }
+  .table_wrapper td:nth-of-type(4):before {
+    content: "Treatment";
+  }
+  .table_wrapper td:nth-of-type(5):before {
+    content: "Medicine";
+  }
+  .table_wrapper td:nth-of-type(6):before {
+    content: "Prescribed By";
+  }
+  .table_wrapper td:nth-of-type(7):before {
+    content: "Date";
+  }
+  .table_wrapper td:nth-of-type(8):before {
+    content: "Actions";
+  }
+}

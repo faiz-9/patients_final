@@ -1,0 +1,40 @@
+.welcome_heading {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #d44b5d;
+  margin: 15px 0;
+}
+
+.signup_heading {
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+}
+
+.forgot_pwd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot_pwd a {
+  text-decoration: none;
+  color: #7c7c7c;
+  font-size: 14px;
+}
+
+#btn1 {
+  margin-bottom: 0px;
+}
+
+#btn2 {
+  border: 1px solid #d44b5d;
+  background: transparent;
+  color: #d44b5d;
+}
+
+.already span a {
+  color: #d44b5d;
+  text-decoration: none;
+}

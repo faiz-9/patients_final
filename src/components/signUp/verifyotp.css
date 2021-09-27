@@ -1,0 +1,52 @@
+.welcome_heading {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #d44b5d;
+  margin: 25px 0;
+}
+.received_otp p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.otp_boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.otpbox {
+  background: #ffffff;
+  border: 1px solid #7c7c7c;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 54px;
+  height: 54px;
+}
+
+.verify_button {
+  /* text-align: center; */
+  width: 100%;
+}
+
+.resend_otp {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resend_otp a {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.otp_wrapper button {
+  background: #d44b5d;
+  border-radius: 25.5px;
+  padding: 9px 18px;
+  outline: none;
+  border: 1px solid #d44b5d;
+  cursor: pointer;
+  margin: 30px 0;
+  color: #ffffff;
+  width: 100%;
+}
